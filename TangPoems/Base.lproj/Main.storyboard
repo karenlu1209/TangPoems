@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IRX-Nu-wQK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FBm-4v-rPO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="7Hv-xY-Lvb">
+            <objects>
+                <tabBarController id="FBm-4v-rPO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="NJe-WC-deG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IRX-Nu-wQK" kind="relationship" relationship="viewControllers" id="cmb-KH-qRX"/>
+                        <segue destination="2dl-Vj-Kv7" kind="relationship" relationship="viewControllers" id="Jqp-W8-ZJ6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9bH-iw-jLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1797" y="25"/>
+        </scene>
+        <!--唐詩-->
         <scene sceneID="JXo-tu-rrz">
             <objects>
                 <navigationController id="IRX-Nu-wQK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="唐詩" id="4GJ-dX-qYm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pOe-v1-q29">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LSX-hi-WDa"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6wd-p0-cCS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LX1-Wv-7Fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,6 +210,170 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqW-bs-5FN" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="774.5" y="-591.5"/>
+        </scene>
+        <!--宋詞-->
+        <scene sceneID="PEv-Qv-6Lr">
+            <objects>
+                <navigationController id="2dl-Vj-Kv7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="宋詞" id="rMS-Nr-alP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v30-Ts-lNI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y6A-r5-EOZ" kind="relationship" relationship="rootViewController" id="q7d-IE-CKE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X33-gG-5ya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-973" y="606"/>
+        </scene>
+        <!--宋詞-->
+        <scene sceneID="aDd-cC-Ose">
+            <objects>
+                <viewController id="y6A-r5-EOZ" customClass="ViewController" customModule="TangPoems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NzP-xH-4ov"/>
+                        <viewControllerLayoutGuide type="bottom" id="WkH-Dw-UWI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jq1-eh-G74">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2a-O3-yMn">
+                                <rect key="frame" x="126" y="183" width="123" height="42"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="范仲淹"/>
+                                <connections>
+                                    <segue destination="Vjf-WX-pNu" kind="show" id="8bs-gA-O0n">
+                                        <nil key="action"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiC-zh-zky">
+                                <rect key="frame" x="126" y="233" width="123" height="42"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="張先"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvU-fq-y3J">
+                                <rect key="frame" x="126" y="283" width="123" height="42"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="柳永"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="依作者排列" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8W-Pi-qB0">
+                                <rect key="frame" x="57" y="104" width="260" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="宋詞" id="HRP-jU-eD0"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GT3-RY-KVW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99.5" y="656.5"/>
+        </scene>
+        <!--宋詞-->
+        <scene sceneID="tVu-nE-H5Q">
+            <objects>
+                <viewController id="Vjf-WX-pNu" customClass="ViewController" customModule="TangPoems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GpZ-Vn-j9g"/>
+                        <viewControllerLayoutGuide type="bottom" id="yMj-rC-Nea"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wOX-yt-7Nl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ln4-Rc-Dp8">
+                                <rect key="frame" x="126" y="233" width="123" height="42"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="漁 家 傲"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDL-v7-Jqb">
+                                <rect key="frame" x="126" y="283" width="123" height="42"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="御 街 行"/>
+                                <connections>
+                                    <segue destination="y2S-0T-ZQm" kind="show" id="07H-4h-nyD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="范仲淹作品" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kx-1B-Zza">
+                                <rect key="frame" x="57" y="104" width="260" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxV-cH-tOB">
+                                <rect key="frame" x="126" y="183" width="123" height="42"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="蘇 幕 遮"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="宋詞" id="PyR-Cc-yPA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQv-Kg-l2K" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362.5" y="656.5"/>
+        </scene>
+        <!--宋詞-->
+        <scene sceneID="3Z6-ne-S1J">
+            <objects>
+                <viewController id="y2S-0T-ZQm" customClass="ViewController" customModule="TangPoems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWO-1d-gPh"/>
+                        <viewControllerLayoutGuide type="bottom" id="UgR-PH-moX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zSg-Zr-JIj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="御 街 行" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-M9-k9Z">
+                                <rect key="frame" x="57" y="104" width="260" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PWa-2H-V4P">
+                                <rect key="frame" x="20" y="248" width="335" height="172"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">紛 紛 墜 葉 飄 香 砌 。 	　夜 寂 靜 、
+寒 聲 碎 。 	　真 珠 簾 捲 玉 樓 空 ，
+天 淡 銀 河 垂 地 。 	　年 年 今 夜 ，
+月 華 如 練 ， 	　長 是 人 千 里 。
+○ 愁 腸 已 斷 無 由 醉 。 	　酒 未 到 、
+先 成 淚 。 	　殘 燈 明 滅 枕 頭 敧 。
+諳 盡 孤 眠 滋 味 。 	　都 來 此 事 ，
+眉 間 心 上 ， 	　無 計 相 迴 避 。 </string>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="宋詞" id="X2B-ic-qk9"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSp-oA-wRU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806.5" y="656.5"/>
         </scene>
     </scenes>
 </document>
